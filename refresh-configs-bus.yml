@@ -1,0 +1,17 @@
+server:
+  port: 8097
+  
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring:
+   cloud:
+     rabbitmq:
+       host: localhost
+         port: 5672
+           username: guest
+           password: guest
+management:
+  security:
+    enabled: false
