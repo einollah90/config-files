@@ -14,9 +14,9 @@ spring:
    cloud:
      rabbitmq:
        host: localhost
-         port: 5672
-           username: guest
-           password: guest
+       port: 5672
+       username: guest
+       password: guest
 management:
   security:
     enabled: false
