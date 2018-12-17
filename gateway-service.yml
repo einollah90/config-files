@@ -17,21 +17,21 @@ spring:
         locator:
           enabled: true
       routes:
-      - id: employee-service
+        id: employee-service
         uri: lb://employee-service
         predicates:
-        - Path=/employee/**
+         Path=/employee/**
         filters:
-        - RewritePath=/employee/(?<path>.*), /$\{path}
-      - id: department-service
+         RewritePath=/employee/(?<path>.*), /$\{path}
+        id: department-service
         uri: lb://department-service
         predicates:
-        - Path=/department/**
+          Path=/department/**
         filters:
-        - RewritePath=/department/(?<path>.*), /$\{path}
-      - id: organization-service
+          RewritePath=/department/(?<path>.*), /$\{path}
+        id: organization-service
         uri: lb://organization-service
         predicates:
-        - Path=/organization/**
+          Path=/organization/**
         filters:
-        - RewritePath=/organization/(?<path>.*), /$\{path}
+          RewritePath=/organization/(?<path>.*), /$\{path}
